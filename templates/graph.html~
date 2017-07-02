@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>  
+  <head>
+    <link href="/static/logo.png" rel="icon" />
+<title>frm - graph</title>
+<style> 
+.flex-container {
+    display: -webkit-flex;
+    display: flex;  
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    text-align: left;
+}
+
+.flex-container > * {
+    padding: 15px;
+    -webkit-flex: 1 100%;
+    flex: 1 100%;
+}
+
+.article {
+    text-align: left;
+}
+
+header {background: #556B2F;color:white;}
+footer {background: #aaa;color:white;}
+.nav {background:#eee;}
+
+.nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin:-4px 0 4px 0;
+    width: 200px;
+    overflow:auto;
+    background-color: #f1f1f1;
+    border: 1px solid #555;
+}
+li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+li a.active {
+    background-color: black;
+    color: white;
+}
+
+li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+
+@media all and (min-width: 768px) {
+	.nav {text-align:left;-webkit-flex: 0.1 auto;flex:0.1 auto;-webkit-order:1;order:1}
+	.article {-webkit-flex:5 0px;flex:5 0px;-webkit-order:2;order:2;}
+	footer{-webkit-order:3;order:3;}
+}
+
+</style>
+</head>
+<body>
+
+<div class="flex-container">
+<header>
+  <h1>Financial Regression Modelling</h1>
+</header>
+
+<!---TOP-NAV-BAR------TOP-NAV-BAR------TOP-NAV-BAR------TOP-NAV-BAR------TOP-NAV-BAR------TOP-NAV-BAR------TOP-NAV-BAR--->
+<head><style>
+body {margin:0.5;}
+.topnav a {
+float: left;
+display: block;
+color: #007acc;
+text-align:center;
+padding: 14px 16px;
+text-direction: none;
+font-size:17px;
+}
+
+.topnav a:hover {
+background-color:#007acc;
+color:black;
+}
+</head></style>
+      	<div class="topnav" id="myTopnav">
+	  <a href="/homepage">Home</a>
+	  <a href="/stocktracker">Stock Tracker</a>
+	  <a href="/stockcompare">StockCompare</a>
+	  <a href="/websitestatistics">Website statistics</a>
+	  <a href="/aboutme">About Me</a>
+	</div>
+<!---TOP-NAV-BAR------TOP-NAV-BAR------TOP-NAV-BAR------TOP-NAV-BAR------TOP-NAV-BAR------TOP-NAV-BAR------TOP-NAV-BAR--->
+<!---PYGAL------PYGAL------PYGAL------PYGAL------PYGAL------PYGAL------PYGAL------PYGAL------PYGAL------PYGAL------PYGA-->
+<body>
+  {% for id in ids %}
+  <div id="{{id}}"></div>
+  {% endfor %}
+</body>
+<!-- D3.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<!-- Plotly.js -->
+<script src="https://d14fo0winaifog.cloudfront.net/plotly-basic.js"></script>
+
+<script type="text/javascript">
+  var graphs = {{graphJSON | safe}};
+  var ids = {{ids | safe}};
+  for(var i in graphs) {
+  Plotly.plot(ids[i], // the ID of the div, created above
+  graphs[i].data,
+  graphs[i].layout || {});
+  }
+</script>
+
+<h3> <a href='/stocktracker'>Back to Stocktracker</a></h3>
+<!---PYGAL------PYGAL------PYGAL------PYGAL------PYGAL------PYGAL------PYGAL------PYGAL------PYGAL------PYGAL------PYGA-->
+yrval = {{ yrval }}<br>
+xval= {{ xval }}<br>
+yval = {{ yval }}<br>
+rsquared ={{ rsquared }}<br>
+squared_error_regression =  {{ squared_error_regression }}<br>
+squared_error_mean = {{ squared_error_mean }}<br>
+Gradient (m)= {{ m }}<br>
+
+<footer>Copyright &copy; frmdotpy</footer>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

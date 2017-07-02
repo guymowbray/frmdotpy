@@ -1,0 +1,14 @@
+<!doctype html>
+ <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+<title>Error!</title>
+<link rel=stylesheet type=text/css href='{{ url_for('static',filename='style_ticker.css')}}'>
+<div class=page>
+  <h1>Errorzs</h1>
+  <div class=metanav>
+    <h2>Something has gone wrong.</h2>
+	<!--<h3>Most likely, the ticker or year you entered was invalid.</h3>-->
+	<h3>Most likely, the ticker ({{ticker}}) or year ({{year}}) you entered was invalid.</h3>
+	<h3> <a href='/stocktracker'>Back to Home</a></h3>
+	{{ DFOPEN }}
+  </div>
+</div>

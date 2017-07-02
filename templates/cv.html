@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <title>About Me</title>
+  <link href="/static/logo.png" rel="icon" />
+  <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+  <body>
+    <head>    
+      
+      <style>
+	.flex-container {
+	display: -webkit-flex;
+	display: flex;  
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+	text-align: left;
+	}
+	
+	.flex-container > * {
+	padding: 15px;
+	-webkit-flex: 1 100%;
+	flex: 1 100%;
+	}
+        
+	header {background:   #527DFF;color:white;}
+	footer {background:   #527DFF;color:white;}
+	.nav {background:#eee;}
+        
+	body {
+	background-image:url("http://i.imgur.com/OyHh99p.png");
+	background-repeat: no-repeat;
+	background-position:right top;
+	margin-right:200px;
+	background-attachment:fixed;
+	}
+	.content {
+	max-width:1000px;
+	margin:auto;
+	background:white;
+	padding:25px;
+      }
+	
+      </style>
+    </head>
+  <body>
+    
+    <div class="flex-container">
+      <header>
+	<h1>Financial Regression Modelling</h1>
+	<p id="demo"></p>
+	<script>
+	  document.getElementById("demo").innerHTML = Date();
+	</script> 
+      </header>
+      <head><style>
+	  body {margin:0.5;}
+	  .topnav a {
+	  float: left;
+	  display: block;
+	  color: #007acc;
+	  text-align:center;
+	  padding: 14px 16px;
+	  text-direction: none;
+	  font-size:17px;
+	  }
+	  
+	  .topnav a:hover {
+	  background-color:#007acc;
+	  color:black;
+	  }
+      </head></style>
+      <div class="content">
+	<div class="topnav" id="myTopnav">
+	  <a href="/homepage">Home</a>
+	  <a href="/stocktracker">Stock Tracker</a>
+	  <a href="/stockcompare">StockCompare</a>
+	  <a href="/websitestatistics">Website statistics</a>
+	  <a href="/aboutme">About Me</a>
+	</div>
+  </body>
+  <!---TOP-NAV-BAR------TOP-NAV-BAR------TOP-NAV-BAR------TOP-NAV-BAR------TOP-NAV-BAR------TOP-NAV-BAR------TOP-NAV-BAR--->  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+  html,body,h1,h2,h3,h4,h5,h6 {font-family:"Roboto",sans-serif}
+</style>
+  <body class="w3-light-grey">
+    
+    <!-- PAGE CONTAINER -->
+    <div class="w3-content w3-margin-top" style="max-width:1400px;">
+      
+      <!-- THE GRID -->
+      <div class="w3-row-padding">
+	
+	<!-- LEFT COLUMN -->
+	<div class="w3-third">
+	  
+	  <div class="w3-white w3-text-grey w3-card-4">
+	    <div class="w3-display-container">
+	      <img src="/static/me.jpg" style="width:100%" alt="Avatar">
+	      <div class="w3-display-bottomleft w3-container w3-text-white">
+		<h2>Tony Wu</h2>
+	      </div>
+	    </div>
+	    <div class="w3-container">
+	      <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Profession</p>
+	      <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Location</p>
+	      <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>email@email.com</p>
+	      <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>01234567891</p>
+	      <p>For a full CV please email me</p>
+	      <hr>
+	      
+	      <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>SKILLS</b></p>
+	      <p>Python</p>
+	           
+	      
+	      <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Languages</b></p>
+	      <p>English - Fluent</p>
+	      <div class="w3-light-grey w3-round-xlarge">
+	      </div>
+	      <p>Language2 - Fluent</p>
+	      <div class="w3-light-grey w3-round-xlarge">
+	      </div>
+	      <br>
+	    </div>
+	  </div><br>
+	  
+	  <!--- END LEFT COLUMN --->
+	</div>
+	
+	<!--- RIGHT COLUMN --->
+	<div class="w3-twothird">
+	  <div class="w3-container w3-card-2 w3-white w3-margin-bottom">
+	    <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Work Experience</h2>
+	    <div class="w3-container">
+	      <h5 class="w3-opacity"><b>Developer, frmdotpy</b></h5>
+	      <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Mar 2017 - ongoing</h6>
+	      <p>Front and back end development of website.</p><hr>
+	    </div>
+
+	  
+	  <div class="w3-container w3-card-2 w3-white">
+	    <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
+	    <div class="w3-container">
+	      <h5 class="w3-opacity"><b>University of university - University course</b></h5>
+	      <h6 class="w3-text-teal"><i class="fa fa-calender fa-fw w3-margin-right"></i>2010</h6><hr>
+	    </div>
+
+	  </div>
+	  
+	  <!-- END RIGHT COLUMN -->
+	</div>
+	
+	<!-- END GRID -->
+      </div>
+      <!-- END CONTAINER -->
+    </div>
+</div>
+  <footer >Copyright &copy; frmdotpy
+      <!-- LinkedIn icon by Icons8 -->
+      <img src="/static/icons/linkedin.png" style="width:48px;height:48px;">
+    </footer>
+  </body>
+</html>

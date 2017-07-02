@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="/static/logo.png" rel="icon" />
+<title>Stock Compare</title>
+ <style>
+      .flex-container {
+      display: -webkit-flex;
+      display: flex;  
+      -webkit-flex-flow: row wrap;
+      flex-flow: row wrap;
+      text-align: left;
+      }
+      
+      .flex-container > * {
+      padding: 15px;
+      -webkit-flex: 1 100%;
+      flex: 1 100%;
+      }
+            
+      header {background:   #527DFF;color:white;}
+      footer {background:   #527DFF;color:white;}
+      .nav {background:#eee;}
+               
+      body {
+      background-image:url("http://i.imgur.com/OyHh99p.png");
+      background-repeat: no-repeat;
+      background-position:right top;
+      margin-right:200px;
+      background-attachment:fixed;
+      }
+      .content {
+      max-width:750px;
+      margin:auto;
+      background:white;
+      padding:25px;
+      }
+      
+    </style>
+</head>
+<body>
+
+<div class="flex-container">
+<header>
+  <h1>Financial Regression Modelling</h1>
+  <p id="demo"></p>
+   <script>
+document.getElementById("demo").innerHTML = Date();
+</script> 
+</header>
+<!---TOP-NAV-BAR------TOP-NAV-BAR------TOP-NAV-BAR------TOP-NAV-BAR------TOP-NAV-BAR------TOP-NAV-BAR------TOP-NAV-BAR--->
+ <head><style>
+	  body {margin:0;}
+	  .topnav a {
+	  float: left;
+	  background-color: #527DFF;
+	  color:#FFFFFF;
+	  text-align:center;
+	  padding: 20px 15px;
+	  text-direction: right;
+	  font-size:18px;
+	  }
+	  
+	  .topnav a:hover {
+	  background-color:#1E90FF;
+	  color:black;
+	  }
+      </head></style>
+<div class="content">
+      <div class="content">
+	<div class="topnav" id="myTopnav">
+	  <a href="/homepage">Home</a>
+	  <a href="/stocktracker">Stock Tracker</a>
+	  <a href="/stockcompare">StockCompare</a>
+	  <a href="/websitestatistics">Website statistics</a>
+	  <a href="/aboutme">About Me</a>
+	</div>	  
+      
+<!---TOP-NAV-BAR------TOP-NAV-BAR------TOP-NAV-BAR------TOP-NAV-BAR------TOP-NAV-BAR------TOP-NAV-BAR------TOP-NAV-BAR--->
+<body><br><br><br><br>
+ 
+Note: This page is still under construction; it has limited functionality but will hopefully be completed soon.
+</body>
+<!---TICKER-INPUT------TICKER-INPUT------TICKER-INPUT------TICKER-INPUT------TICKER-INPUT------TICKER-INPUT------TICKER-->	
+<div class=page>
+  <div class=metanav>
+        <h2>Enter stock ticker 1 (eg. AAPL), stock ticker 2 (eg. NDAQ) and check desired features.</h2>
+    <form id='input' method='post' action='stockcompareinput'>	
+      <p>Ticker symbol 1 (Independant variable): <input type='text' name='ticker1' />
+      </p>
+      <p>Ticker symbol 2 (Dependant variable: <input type='text' name='ticker2' />
+      </p>
+      <p>Start year: <input type='text' name='year' />
+	<br><i>*defaults to first year of Quandl record</i>
+      </p>
+      <p><input type="checkbox" name='feat1' value='Open'>Opening price<br>
+	<input type="checkbox" name='feat2' value='Close'>Closing price<br>
+	<input type="checkbox" name='feat3' value='Range'>Range (High/Low)<br>
+      </p>
+      <p><input type="submit" value="Submit">
+      </p>  		
+    </form>
+  </div>
+</div>
+</body>
+
+<!---TICKER-INPUT------TICKER-INPUT------TICKER-INPUT------TICKER-INPUT------TICKER-INPUT------TICKER-INPUT------TICKER-->
+</div>
+</div>
+<footer>Copyright &copy; frmdotpy</footer>
+
+</body>
+</html>
